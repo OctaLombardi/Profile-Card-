@@ -1,0 +1,140 @@
+:root {
+  --dark-cyan: rgb(25, 162, 174);
+  --very-dark-blue: rgb(45, 50, 72);
+  --dark-greyish: rgb(106, 111, 129);
+}
+
+* {
+  font-family: 'Kumbh Sans', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: var(--dark-cyan);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.top-bg {
+  position: absolute;
+  background: url(./images/bg-pattern-top.svg);
+  width: 978px;
+  height: 978px;
+  top: -528px;
+  left: -284px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.bottom-bg {
+  position: absolute;
+  background: url(./images/bg-pattern-bottom.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 978px;
+  width: 978px;
+  bottom: -628px;
+  right: -250px;
+}
+
+.card {
+  height: 380px;
+  width: 350px;
+  background: white;
+  border-radius: 20px;
+  position: relative;
+}
+
+.card .card-bg {
+  background: url(./images/bg-pattern-card.svg);
+  width: 100%;
+  height: 150px;
+  position: relative;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.profile .pic {
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  border-radius: 50%;
+  padding: 5px;
+  top: 94px;
+  background-color: white;
+}
+
+.profile .pic img {
+  border-radius: 50%;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 74px;
+}
+
+.profile {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid var(--dark-greyish);
+  padding-bottom: 25px;
+}
+
+.profile .name {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--dark-greyish);
+}
+
+.profile .name span {
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+.profile .location {
+  color: var(--dark-greyish);
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.stats .number {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+.stats p {
+  color: var(--dark-greyish);
+}
+
+/* Responsive*/
+
+@media (max-width: 375px) {
+  .top-bg {
+    height: 375px;
+    width: 375px;
+    top: -160px;
+    left: -167px;
+  }
+  .bottom-bg {
+    height: 375px;
+    width: 375px;
+    bottom: -79px;
+    right: -167px;
+  }
+}
